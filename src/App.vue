@@ -1,10 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <TestClick />
-  <p>Second line {{ hello }}</p>
-  <test-loop />
-  <test-form />
+  <provide-test>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TestClick />
+    <p>Second line {{ hello }}</p>
+    <sub-test>
+      <test-loop />
+      <test-form />
+    </sub-test>
+  </provide-test>
 </template>
 
 <script>
@@ -13,6 +17,8 @@ import TestClick from './components/TestClick.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import TestLoop from './components/TestLoop.vue'
 import TestForm from './components/TestForm.vue'
+import SubTest from './components/SubTest.vue'
+import ProvideTest from './components/ProvideTest.vue'
 
 export default {
   name: 'App',
@@ -25,7 +31,9 @@ export default {
     HelloWorld,
     TestClick,
     TestLoop,
-    TestForm
+    TestForm,
+    SubTest,
+    ProvideTest
   }
 }
 </script>
